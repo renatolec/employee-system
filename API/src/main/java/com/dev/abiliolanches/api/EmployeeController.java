@@ -30,4 +30,15 @@ public class EmployeeController {
     public Employee findById(@PathVariable int employeeId){
         return employeeService.findById(employeeId);
     }
+
+    @PostMapping("/employees")
+    public void save(@RequestBody Employee employee){
+        employeeService.save(employee);
+    }
+
+    @DeleteMapping("/employees/{employeeId}")
+    public void deleteById(@PathVariable int employeeId){
+        employeeService.deleteById(employeeId);
+    }
+
 }

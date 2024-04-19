@@ -9,4 +9,6 @@ public interface EmployeeService {
     List<Employee> findAll();
     Employee findById(int id);
     List<Employee> findByFNameLike(String fname);
+    void save(Employee employee);
+    void deleteById(int id);
 }

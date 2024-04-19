@@ -2,6 +2,7 @@ package com.dev.abiliolanches.dao;
 
 import com.dev.abiliolanches.entity.Employee;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.Transient;
 import jakarta.persistence.TypedQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -36,5 +37,16 @@ public class EmployeeDAOImpl implements EmployeeDAO{
                     " WHERE e.fname LIKE :searchedFName", Employee.class);
         query.setParameter("searchedFName", "%"+fname+"%");
         return query.getResultList();
+    }
+
+    @Override
+    public void save(Employee employee) {
+        entityManager.merge(employee);
+    }
+
+    @Override
+    public void deleteById(int id) {
+        Employee employee = entityManager.find(Employee.class, id);
+        entityManager.remove(employee);
     }
 }

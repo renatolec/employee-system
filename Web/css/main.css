@@ -59,6 +59,10 @@ th, td{
     padding: 5px 15px;
 }
 
+td:nth-last-child(2), td:last-child{
+    padding: 5px 5px;
+}
+
 tr:nth-child(even) {
     background-color: #ffffff;
 }
@@ -68,11 +72,11 @@ tr td:first-child{
 }
 
 /* DASHBOARD */
-.dashboard{
+.dashboard, .register{
     padding: 20px;
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    flex-direction: row;
     align-items: start;
     gap: 40px;
 }
@@ -101,4 +105,17 @@ button:hover{
     color: black;
 }
 
+table button{
+    border-radius: 50%;
+}
+
+
+/* COLORS */
+.delete{
+    background-color: red;
+}
+
+.update{
+    background-color: orange;
+}
 

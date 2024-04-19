@@ -2,6 +2,7 @@ package com.dev.abiliolanches.service;
 
 import com.dev.abiliolanches.dao.EmployeeDAO;
 import com.dev.abiliolanches.entity.Employee;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,5 +31,17 @@ public class EmployeeServiceImpl implements EmployeeService{
     @Override
     public List<Employee> findByFNameLike(String fname) {
         return employeeDAO.findByFNameLike(fname);
+    }
+
+    @Override
+    @Transactional
+    public void save(Employee employee) {
+        employeeDAO.save(employee);
+    }
+
+    @Override
+    @Transactional
+    public void deleteById(int id) {
+        employeeDAO.deleteById(id);
     }
 }
