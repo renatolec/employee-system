@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-
+<html xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../assets/fontawesome/css/all.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" th:href="@{/assets/fontawesome/css/all.css}">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
 </head>
 
 <body>
@@ -13,8 +13,8 @@
             <a href="#"><i class="fa-solid fa-circle-user fa-2x"></i> Renato Leite Camilo </a>
         </div>
         <div class="links">
-            <a href="../html/register.html"><i class="fa-solid fa-user-plus"></i>Cadastrar</a>
-            <a href="../html/dashboard.html"><i class="fa-solid fa-users"></i>Funcionários</a>
+            <a th:href="@{/employees/register}"><i class="fa-solid fa-user-plus"></i>Cadastrar</a>
+            <a th:href="@{/employees}"><i class="fa-solid fa-users"></i>Funcionários</a>
             <a href="#"><i class="fa-solid fa-right-to-bracket"></i>Entrar</a>
         </div>
     </nav>
@@ -26,12 +26,13 @@
             <input type="text" name="fname" id="fname" placeholder="Nome">
             <input type="text" name="lname" id="lname" placeholder="Sobrenome">
             <input type="email" name="email" id="email" placeholder="Email">
-            <button type="submit"> <i class="fa-solid fa-magnifying-glass"></i> Salvar </button>
+            <button type="submit"> <i class="fa-solid fa-check"></i> Salvar </button>
         </form>
         
     </div>
 
     
-    <script src="../js/register.js"></script>
+    <script th:src="@{/js/register.js}"></script>
     
 </body>
+</html>

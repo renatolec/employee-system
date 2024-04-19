@@ -31,9 +31,9 @@ window.onload = function () {
                 let updateIcon = document.createElement('i');
                 updateIcon.classList.add('fa-solid', 'fa-arrows-rotate');
                 updateButton.appendChild(updateIcon);
-                updateButton.addEventListener('click', function () {
-                    deleteEmployee(employee.id, table);
-                });
+                updateButton.addEventListener('click', function() {
+                    window.location.href = `employees/update?id=${employee.id}`;
+                })
                 row.insertCell(4).appendChild(updateButton);
 
                 let deleteButton = document.createElement('button');
@@ -80,9 +80,9 @@ function loadEmployees(table) {
                 let updateIcon = document.createElement('i');
                 updateIcon.classList.add('fa-solid', 'fa-arrows-rotate');
                 updateButton.appendChild(updateIcon);
-                updateButton.addEventListener('click', function () {
-                    deleteEmployee(employee.id, table);
-                });
+                updateButton.addEventListener('click', function() {
+                    window.location.href = `employees/update?id=${employee.id}`;
+                })
                 row.insertCell(4).appendChild(updateButton);
 
                 let deleteButton = document.createElement('button');
