@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="#"><i class="fa-solid fa-circle-user fa-2x"></i> Renato Leite Camilo </a>
+        </div>
+        <div class="links">
+            <a href="#"><i class="fa-solid fa-book-open"></i>Funcionários</a>
+            <a href="#"><i class="fa-solid fa-right-to-bracket"></i>Entrar</a>
+        </div>
+    </nav>
+
+    <div class="dashboard">
+
+        <form id="searchForm" method="get">
+            <h5>Terminal de Consultas</h5>
+            <input type="text" name="fname" placeholder="Nome">
+            <button type="submit"> <i class="fa-solid fa-magnifying-glass"></i> Pesquisar </button>
+        </form>
+
+        <table id="employee_table">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Email</th>
+            </tr>
+        </table>
+    </div>
+    <script src="main.js"></script>
+    
+</body>

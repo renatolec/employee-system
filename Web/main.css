@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+html{
+    background-color: rgb(238, 238, 238);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(65, 105, 225);
+    padding: 10px 20px;
+    height: 2.5em;
+}
+
+.logo a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.links a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.links a:hover i, .links a:hover{
+    color: black;
+}
+
+nav i, nav a{
+    color: white;
+    transition-duration: 0.2s;
+}
+
+/* TABELA */
+table{
+    border-spacing: 0px;
+}
+
+th{
+    background-color: rgb(65, 105, 225);
+    color: white;
+}
+
+th, td{
+    padding: 5px 15px;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+tr td:first-child{
+    font-weight: bold;
+}
+
+/* DASHBOARD */
+.dashboard{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 40px;
+}
+
+form{
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px grey;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+button{
+    font-weight: bold;
+    border: 0px;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(65, 105, 225);
+}
+
+button:hover{
+    color: black;
+}
+
+
